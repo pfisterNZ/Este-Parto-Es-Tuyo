@@ -1,0 +1,18 @@
+---
+export interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<div class="w-full max-w-[700px] rounded-2xl overflow-hidden shadow-xl bg-white transition-transform hover:scale-[1.03] duration-300 animate-fade-in">
+  <blockquote
+    class="instagram-media"
+    data-instgrm-permalink={url}
+    data-instgrm-version="14"
+    style="margin: 0; width: 100%; max-width: 700px;"
+  ></blockquote>
+  <script async src="//www.instagram.com/embed.js"></script>
+</div>
+
