@@ -4,55 +4,21 @@
   --color-girlbaby: #EF7A98;
   --color-boybaby: #689EAD;
   --color-buttons: #FF4C00;
-  
-  /* Breakpoints personalizados para 4K */
-  --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1920px;
-  --breakpoint-4xl: 2560px;
-  --breakpoint-5xl: 3840px;
 }
 
-/* Estilos globales responsive */
+/* Prevenir overflow horizontal */
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html, body {
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* Optimizaciones para móviles */
-@media (max-width: 640px) {
-  .text-responsive {
-    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
-  }
-}
-
-/* Optimizaciones para pantallas 4K */
-@media (min-width: 2560px) {
-  .container-responsive {
-    max-width: 2400px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 3840px) {
-  .container-responsive {
-    max-width: 3600px;
-    margin: 0 auto;
-  }
-}
-
-/* Mejoras de accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+/* Asegurar que todos los elementos respeten el ancho del viewport */
+.container, .w-full, [class*="max-w"] {
+  max-width: 100vw;
 }
 
