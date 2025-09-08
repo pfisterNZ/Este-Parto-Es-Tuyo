@@ -10,24 +10,13 @@ import Btn from "./CardsBtn/Btn.astro";
         +2000 Mamás ya probaron éste programa. <span class="text-boybaby"> esto es lo que dicen algunas de ellas!</span>
     </h2>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-        <!-- Video 1 -->
-        <div class="w-[350px] sm:w-[400px]">
-            <script src="https://fast.wistia.com/player.js" async></script>
-            <script src="https://fast.wistia.com/embed/wl7hgl23f0.js" async type="module"></script>
-            <style>
-                wistia-player[media-id='wl7hgl23f0']:not(:defined) { 
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wl7hgl23f0/swatch'); 
-                    display: block; 
-                    filter: blur(5px); 
-                    padding-top: 177.78%; 
-                }
-            </style>
-            <wistia-player media-id="wl7hgl23f0" aspect="0.5625"></wistia-player>
-        </div>
+    <div class="relative flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+
+        <!-- Imagen de fondo -->
+        <img src="src/assets/Ellipse4.svg" alt="" class="absolute w-[800px] sm:mw-[700px] h-auto -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         
-        <!-- Video 2 -->
-        <div class="w-[350px] sm:w-[400px]">
+        <!-- Video 1 -->
+        <div class="w-[350px] sm:w-[400px] relative z-10">
             <script src="https://fast.wistia.com/player.js" async></script>
             <script src="https://fast.wistia.com/embed/kzutnc55fb.js" async type="module"></script>
             <style>
@@ -40,10 +29,43 @@ import Btn from "./CardsBtn/Btn.astro";
             </style>
             <wistia-player media-id="kzutnc55fb" aspect="0.5625"></wistia-player>
         </div>
+        
+        <!-- Video 2 -->
+        <div class="w-[350px] sm:w-[400px] relative z-10">
+            <script src="https://fast.wistia.com/player.js" async></script>
+            <script src="https://fast.wistia.com/embed/wl7hgl23f0.js" async type="module"></script>
+            <style>
+                wistia-player[media-id='wl7hgl23f0']:not(:defined) { 
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wl7hgl23f0/swatch'); 
+                    display: block; 
+                    filter: blur(5px); 
+                    padding-top: 177.78%; 
+                }
+            </style>
+            <wistia-player media-id="wl7hgl23f0" aspect="0.5625"></wistia-player>
+        </div>
     </div>
+
+    <section class="p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div>
+            <img src="icons/whatsapp/whatsapp1.png" alt="" class="w-full h-auto sm:w-[400px] sm:h-auto  ">
+          </div>
+          <div>
+            <img src="icons/whatsapp/whatsapp2.png" alt="" class="w-full h-auto sm:w-[400px] sm:h-auto ">
+          </div>
+          <div>
+            <img src="icons/whatsapp/whatsapp3.png" alt="" class="w-full h-auto sm:w-[400px] sm:h-auto ">
+          </div>
+          <div>
+            <img src="icons/whatsapp/whatsapp4.png" alt="" class="w-full h-auto sm:w-[400px] sm:h-auto ">
+          </div>
+        </div>
+    </section>
 
     <Btn href="/">
         QUIERO TENER MEJOR EXPERIENCIA EN MI PARTO »»
     </Btn>
+
 
 </div>
