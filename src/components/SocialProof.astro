@@ -2,40 +2,48 @@
 import Elipse from "../assets/Ellipse4.svg"
 
 import Btn from "./CardsBtn/Btn.astro";
-import CardInsta from "./CardsBtn/CardInsta.astro";
----
+--- 
 
-<div class="w-full flex flex-col items-center justify-center gap-6 sm:gap-8 lg:gap-10 py-8 px-4">
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-lg 2xl:max-w-lg px-2">
+
+<div class="flex flex-col items-center justify-center gap-10 z-10">
+    <h2 class="text-xl sm:text-2xl md:text-3xl xl:w-[1000px] lg:w-[1100px] font-bold text-center">
         +2000 Mamás ya probaron éste programa. <span class="text-boybaby"> esto es lo que dicen algunas de ellas!</span>
     </h2>
-    
-    <!-- Instagram Publicacion  -->
-    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-10 relative">
-        <div class="w-full lg:w-auto flex justify-center">
-            <CardInsta url="https://www.instagram.com/p/DEsMPrWu73Z/" />
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        <!-- Video 1 -->
+        <div class="w-[350px] sm:w-[400px]">
+            <script src="https://fast.wistia.com/player.js" async></script>
+            <script src="https://fast.wistia.com/embed/wl7hgl23f0.js" async type="module"></script>
+            <style>
+                wistia-player[media-id='wl7hgl23f0']:not(:defined) { 
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wl7hgl23f0/swatch'); 
+                    display: block; 
+                    filter: blur(5px); 
+                    padding-top: 177.78%; 
+                }
+            </style>
+            <wistia-player media-id="wl7hgl23f0" aspect="0.5625"></wistia-player>
         </div>
-        <img src={Elipse.src} alt="Elipse" class="w-auto h-[400px] sm:h-[500px] lg:h-[600px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 hidden lg:block" />
-        <div class="w-full lg:w-auto flex justify-center">
-          <CardInsta url="https://www.instagram.com/p/DFNzPCiuTJD/" />
+        
+        <!-- Video 2 -->
+        <div class="w-[350px] sm:w-[400px]">
+            <script src="https://fast.wistia.com/player.js" async></script>
+            <script src="https://fast.wistia.com/embed/kzutnc55fb.js" async type="module"></script>
+            <style>
+                wistia-player[media-id='kzutnc55fb']:not(:defined) { 
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kzutnc55fb/swatch'); 
+                    display: block; 
+                    filter: blur(5px); 
+                    padding-top: 177.78%; 
+                }
+            </style>
+            <wistia-player media-id="kzutnc55fb" aspect="0.5625"></wistia-player>
         </div>
     </div>
 
-    <!-- Textos de whatsapp -->
-     <div class="w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-10 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-lg 2xl:max-w-lg">
-        <div class="flex flex-col items-center justify-center gap-2">
-            <img src="/icons/whatsapp2.png" alt="whatsapp" class="w-full max-w-[280px] sm:max-w-[300px] h-auto sm:h-[250px] lg:h-[300px] object-contain" />
-        </div>
-        <div class="flex flex-col items-center justify-center gap-2">
-            <img src="/icons/whatsapp3.png" alt="whatsapp" class="w-full max-w-[280px] sm:max-w-[300px] h-auto sm:h-[250px] lg:h-[300px] object-contain" />
-        </div>
+    <Btn href="/">
+        QUIERO TENER MEJOR EXPERIENCIA EN MI PARTO »»
+    </Btn>
 
-     </div>
-
-     <!-- Btn -->
-     <div class="w-full flex flex-col items-center justify-center my-6 sm:my-8 lg:my-10">
-        <Btn href="/" >
-            QUIERO TENER MEJOR EXPERIENCIA EN MI PARTO »»   
-        </Btn>
-     </div>
 </div>
