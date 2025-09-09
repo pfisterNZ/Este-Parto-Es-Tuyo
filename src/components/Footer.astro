@@ -1,0 +1,30 @@
+--- 
+import Counter from "../microComponents/Counter.astro";
+import Btn from "./CardsBtn/Btn.astro";
+---
+
+<div class="w-full h-auto flex flex-col items-center justify-center">
+    <img src="/icons/Subtract.svg" alt="" class="w-screen h-auto" />
+    <div class="flex flex-col items-center justify-center bg-girlbaby w-full py-4 md:py-6 shadow-inner-xl shadow-pink-200 gap-6 md:gap-8 px-3 md:px-6">
+        <!-- Contador Casio -->
+        <Counter hours={17} minutes={30} seconds={59} />
+      <h2 class="text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-center md:mb-4 text-white px-2 md:px-4 leading-tight w-full md:w-[900px]">
+        Puedes dejar que el miedo controle tu parto… <strong>o aprender a vivirlo con calma y seguridad.</strong>
+      </h2>
+      <p class="text-sm sm:text-base md:text-lg text-center text-white font-medium px-0 md:px-4 leading-relaxed w-full md:w-[850px] md:mb-6">
+        <strong>Tu bebé merece llegar al mundo en calma</strong> y <strong>tú mereces vivir tu parto sin miedo</strong>. Con este curso tendrás <strong>la información, las herramientas y la confianza</strong> que necesitas para <strong>transformar tu experiencia</strong>.
+      </p>
+      <div class="w-full md:w-[500px] max-w-sm md:max-w-md">
+        <Btn href="https://pay.hotmart.com/J101706380P?sck=HOTMART_PRODUCT_PAGE&off=2antyrsq&hotfeature=32&bid=1757370540699" animate={true}>
+          Quiero que mi bebé llegue al mundo en calma 💖 
+        </Btn>
+      </div>
+  
+      <div class="w-full md:w-[850px] flex flex-col items-center justify-center bg-red-500 py-3 md:py-4 px-4">
+        <p class="text-xs sm:text-sm md:text-base text-center text-white font-medium leading-relaxed">
+            ⚠️⚠️ <strong>No postergues tu preparación:</strong> cada día que pasa es <strong>un día menos para sentirte lista</strong>. ⚠️⚠️
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
